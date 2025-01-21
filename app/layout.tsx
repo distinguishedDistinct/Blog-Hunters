@@ -25,7 +25,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className="bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-800  "
+    >
       <Head>
         <title>My Custom Title</title>
         <meta name="description" content="Custom description for my page" />

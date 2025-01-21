@@ -25,7 +25,7 @@ const page = () => {
   }, []);
 
   return (
-    <div className="flex justify-evenly mt-8 flex-wrap w-full pl-10 pr-10">
+    <div className="flex justify-evenly pt-8 flex-wrap w-full pl-10 pr-10 bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-800 text-orange-200">
       {blogs.map((blogItem) => {
         return (
           <div

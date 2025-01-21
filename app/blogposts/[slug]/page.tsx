@@ -32,7 +32,7 @@ const BlogPost = () => {
   }, [slug]);
 
   return (
-    <div className="mt-10 flex justify-center">
+    <div className="pt-10 flex justify-center bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-800 text-orange-200">
       <div className="mt-10 flex flex-col text-center w-3/5">
         {currentBlog ? (
           <>
