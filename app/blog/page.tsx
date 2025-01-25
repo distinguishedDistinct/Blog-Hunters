@@ -33,7 +33,7 @@ const page = () => {
             className="Blog flex flex-col gap-8 w-1/4 mx-5 mb-5"
           >
             <Link href={`/blogposts/${blogItem.slug}`}>
-              <div className="blogItem">
+              <div className="blogItem hover:text-white hover:-translate-y-3">
                 <h1 className="mb-2 text-2xl">{blogItem.title}</h1>
                 <p className="description mb-3">
                   {blogItem.content.substring(0, 140) + "..."}
