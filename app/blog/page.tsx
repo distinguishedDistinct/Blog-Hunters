@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 interface Blog {
+  _id: number;
   title: string;
   content: string;
   description: string;
@@ -24,9 +25,20 @@ const page = () => {
       .catch((err) => console.error("Error fetching blogs:", err));
   }, []);
 
+  const [articles, setArticles] = useState<any[]>([]);
+
+  useEffect(() => {
+    async function fetchArticles() {
+      const res = await fetch("/api/articles");
+      const data = await res.json();
+      setArticles(data);
+    }
+    fetchArticles();
+  }, []);
+
   return (
     <div className="flex justify-evenly pt-8 flex-wrap w-full pl-10 pr-10 bg-gradient-to-r from-indigo-800 via-purple-800 to-pink-800 text-orange-200">
-      {blogs.map((blogItem) => {
+      {articles.map((blogItem) => {
         return (
           <div
             key={blogItem.slug}
